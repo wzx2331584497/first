@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bypx.synthesis.dao.MenuroleInterface">
+<insert id="add" parameterType="menurole">
+     insert  into menurole(id,menu,role) values(#{id},#{menu},#{role})
+</insert>
+    <delete id="dele" parameterType="String">
+        delete  from menurole where role=#{role}
+    </delete>
+    <resultMap id="query" type="menurole">
+        <result property="id" column="id"></result>
+        <result property="menu" column="menu"></result>
+        <result property="role" column="role"></result>
+    </resultMap>
+
+
+</mapper>

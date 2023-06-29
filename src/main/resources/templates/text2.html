@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3"></script>
+
+</head>
+<body>
+<div id="app">
+    <div>{{account}}</div>
+    <!--v-text  v-html用于标签之间赋值-->
+
+    <hr>
+    <div v-text="content"></div>
+    <div v-html="content"></div>
+    <div v-if="score>=67">优秀</div>
+
+</div>
+</body>
+<script>
+    const app={data:function(){
+            return{
+                account:"dawda"
+            }
+        }}
+
+
+
+
+
+    // createApp()方法会返回一个Vue实例对象。
+    const  root =Vuc.createApp(app)
+    //ID为app的节点挂载到Vue上。
+    const vm=root.mount("#app")
+</script>
+</html>

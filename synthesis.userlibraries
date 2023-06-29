@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: ch.qos.logback:logback-classic:1.2.3">
+    <archive path="D:/maven_storage/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar" />
+  </library>
+  <library name="Maven: ch.qos.logback:logback-core:1.2.3">
+    <archive path="D:/maven_storage/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.0">
+    <archive path="D:/maven_storage/com/fasterxml/jackson/core/jackson-annotations/2.11.0/jackson-annotations-2.11.0.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.0">
+    <archive path="D:/maven_storage/com/fasterxml/jackson/core/jackson-core/2.11.0/jackson-core-2.11.0.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.0">
+    <archive path="D:/maven_storage/com/fasterxml/jackson/core/jackson-databind/2.11.0/jackson-databind-2.11.0.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.11.0">
+    <archive path="D:/maven_storage/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.0/jackson-datatype-jdk8-2.11.0.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.0">
+    <archive path="D:/maven_storage/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.0/jackson-datatype-jsr310-2.11.0.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.11.0">
+    <archive path="D:/maven_storage/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.0/jackson-module-parameter-names-2.11.0.jar" />
+  </library>
+  <library name="Maven: com.github.jsqlparser:jsqlparser:2.0">
+    <archive path="D:/maven_storage/com/github/jsqlparser/jsqlparser/2.0/jsqlparser-2.0.jar" />
+  </library>
+  <library name="Maven: com.github.pagehelper:pagehelper:5.1.11">
+    <archive path="D:/maven_storage/com/github/pagehelper/pagehelper/5.1.11/pagehelper-5.1.11.jar" />
+  </library>
+  <library name="Maven: com.github.pagehelper:pagehelper-spring-boot-autoconfigure:1.2.13">
+    <archive path="D:/maven_storage/com/github/pagehelper/pagehelper-spring-boot-autoconfigure/1.2.13/pagehelper-spring-boot-autoconfigure-1.2.13.jar" />
+  </library>
+  <library name="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.2.13">
+    <archive path="D:/maven_storage/com/github/pagehelper/pagehelper-spring-boot-starter/1.2.13/pagehelper-spring-boot-starter-1.2.13.jar" />
+  </library>
+  <library name="Maven: com.jayway.jsonpath:json-path:2.4.0">
+    <archive path="D:/maven_storage/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar" />
+  </library>
+  <library name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1">
+    <archive path="D:/maven_storage/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" />
+  </library>
+  <library name="Maven: com.zaxxer:HikariCP:3.4.5">
+    <archive path="D:/maven_storage/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar" />
+  </library>
+  <library name="Maven: io.lettuce:lettuce-core:5.3.0.RELEASE">
+    <archive path="D:/maven_storage/io/lettuce/lettuce-core/5.3.0.RELEASE/lettuce-core-5.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: io.netty:netty-buffer:4.1.49.Final">
+    <archive path="D:/maven_storage/io/netty/netty-buffer/4.1.49.Final/netty-buffer-4.1.49.Final.jar" />
+  </library>
+  <library name="Maven: io.netty:netty-codec:4.1.49.Final">
+    <archive path="D:/maven_storage/io/netty/netty-codec/4.1.49.Final/netty-codec-4.1.49.Final.jar" />
+  </library>
+  <library name="Maven: io.netty:netty-common:4.1.49.Final">
+    <archive path="D:/maven_storage/io/netty/netty-common/4.1.49.Final/netty-common-4.1.49.Final.jar" />
+  </library>
+  <library name="Maven: io.netty:netty-handler:4.1.49.Final">
+    <archive path="D:/maven_storage/io/netty/netty-handler/4.1.49.Final/netty-handler-4.1.49.Final.jar" />
+  </library>
+  <library name="Maven: io.netty:netty-resolver:4.1.49.Final">
+    <archive path="D:/maven_storage/io/netty/netty-resolver/4.1.49.Final/netty-resolver-4.1.49.Final.jar" />
+  </library>
+  <library name="Maven: io.netty:netty-transport:4.1.49.Final">
+    <archive path="D:/maven_storage/io/netty/netty-transport/4.1.49.Final/netty-transport-4.1.49.Final.jar" />
+  </library>
+  <library name="Maven: io.projectreactor:reactor-core:3.3.5.RELEASE">
+    <archive path="D:/maven_storage/io/projectreactor/reactor-core/3.3.5.RELEASE/reactor-core-3.3.5.RELEASE.jar" />
+  </library>
+  <library name="Maven: jakarta.activation:jakarta.activation-api:1.2.2">
+    <archive path="D:/maven_storage/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar" />
+  </library>
+  <library name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5">
+    <archive path="D:/maven_storage/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar" />
+  </library>
+  <library name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3">
+    <archive path="D:/maven_storage/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar" />
+  </library>
+  <library name="Maven: mysql:mysql-connector-java:8.0.20">
+    <archive path="D:/maven_storage/mysql/mysql-connector-java/8.0.20/mysql-connector-java-8.0.20.jar" />
+  </library>
+  <library name="Maven: net.bytebuddy:byte-buddy:1.10.10">
+    <archive path="D:/maven_storage/net/bytebuddy/byte-buddy/1.10.10/byte-buddy-1.10.10.jar" />
+  </library>
+  <library name="Maven: net.bytebuddy:byte-buddy-agent:1.10.10">
+    <archive path="D:/maven_storage/net/bytebuddy/byte-buddy-agent/1.10.10/byte-buddy-agent-1.10.10.jar" />
+  </library>
+  <library name="Maven: net.minidev:accessors-smart:1.2">
+    <archive path="D:/maven_storage/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar" />
+  </library>
+  <library name="Maven: net.minidev:json-smart:2.3">
+    <archive path="D:/maven_storage/net/minidev/json-smart/2.3/json-smart-2.3.jar" />
+  </library>
+  <library name="Maven: org.apache.logging.log4j:log4j-api:2.13.2">
+    <archive path="D:/maven_storage/org/apache/logging/log4j/log4j-api/2.13.2/log4j-api-2.13.2.jar" />
+  </library>
+  <library name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.13.2">
+    <archive path="D:/maven_storage/org/apache/logging/log4j/log4j-to-slf4j/2.13.2/log4j-to-slf4j-2.13.2.jar" />
+  </library>
+  <library name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.35">
+    <archive path="D:/maven_storage/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar" />
+  </library>
+  <library name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.35">
+    <archive path="D:/maven_storage/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.35/tomcat-embed-websocket-9.0.35.jar" />
+  </library>
+  <library name="Maven: org.apiguardian:apiguardian-api:1.1.0">
+    <archive path="D:/maven_storage/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar" />
+  </library>
+  <library name="Maven: org.aspectj:aspectjweaver:1.9.5">
+    <archive path="D:/maven_storage/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar" />
+  </library>
+  <library name="Maven: org.assertj:assertj-core:3.16.1">
+    <archive path="D:/maven_storage/org/assertj/assertj-core/3.16.1/assertj-core-3.16.1.jar" />
+  </library>
+  <library name="Maven: org.attoparser:attoparser:2.0.5.RELEASE">
+    <archive path="D:/maven_storage/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.glassfish:jakarta.el:3.0.3">
+    <archive path="D:/maven_storage/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar" />
+  </library>
+  <library name="Maven: org.hamcrest:hamcrest:2.2">
+    <archive path="D:/maven_storage/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar" />
+  </library>
+  <library name="Maven: org.junit.jupiter:junit-jupiter:5.6.2">
+    <archive path="D:/maven_storage/org/junit/jupiter/junit-jupiter/5.6.2/junit-jupiter-5.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.jupiter:junit-jupiter-api:5.6.2">
+    <archive path="D:/maven_storage/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.jupiter:junit-jupiter-engine:5.6.2">
+    <archive path="D:/maven_storage/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.jupiter:junit-jupiter-params:5.6.2">
+    <archive path="D:/maven_storage/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.platform:junit-platform-commons:1.6.2">
+    <archive path="D:/maven_storage/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.platform:junit-platform-engine:1.6.2">
+    <archive path="D:/maven_storage/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar" />
+  </library>
+  <library name="Maven: org.mockito:mockito-core:3.3.3">
+    <archive path="D:/maven_storage/org/mockito/mockito-core/3.3.3/mockito-core-3.3.3.jar" />
+  </library>
+  <library name="Maven: org.mockito:mockito-junit-jupiter:3.3.3">
+    <archive path="D:/maven_storage/org/mockito/mockito-junit-jupiter/3.3.3/mockito-junit-jupiter-3.3.3.jar" />
+  </library>
+  <library name="Maven: org.mybatis:mybatis:3.5.4">
+    <archive path="D:/maven_storage/org/mybatis/mybatis/3.5.4/mybatis-3.5.4.jar" />
+  </library>
+  <library name="Maven: org.mybatis:mybatis-spring:2.0.4">
+    <archive path="D:/maven_storage/org/mybatis/mybatis-spring/2.0.4/mybatis-spring-2.0.4.jar" />
+  </library>
+  <library name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:2.1.2">
+    <archive path="D:/maven_storage/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.1.2/mybatis-spring-boot-autoconfigure-2.1.2.jar" />
+  </library>
+  <library name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2">
+    <archive path="D:/maven_storage/org/mybatis/spring/boot/mybatis-spring-boot-starter/2.1.2/mybatis-spring-boot-starter-2.1.2.jar" />
+  </library>
+  <library name="Maven: org.objenesis:objenesis:2.6">
+    <archive path="D:/maven_storage/org/objenesis/objenesis/2.6/objenesis-2.6.jar" />
+  </library>
+  <library name="Maven: org.opentest4j:opentest4j:1.2.0">
+    <archive path="D:/maven_storage/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" />
+  </library>
+  <library name="Maven: org.ow2.asm:asm:5.0.4">
+    <archive path="D:/maven_storage/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
+  </library>
+  <library name="Maven: org.projectlombok:lombok:1.18.12">
+    <archive path="D:/maven_storage/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar" />
+  </library>
+  <library name="Maven: org.reactivestreams:reactive-streams:1.0.3">
+    <archive path="D:/maven_storage/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar" />
+  </library>
+  <library name="Maven: org.skyscreamer:jsonassert:1.5.0">
+    <archive path="D:/maven_storage/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar" />
+  </library>
+  <library name="Maven: org.slf4j:jul-to-slf4j:1.7.30">
+    <archive path="D:/maven_storage/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar" />
+  </library>
+  <library name="Maven: org.slf4j:slf4j-api:1.7.30">
+    <archive path="D:/maven_storage/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot/2.3.0.RELEASE/spring-boot-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-autoconfigure/2.3.0.RELEASE/spring-boot-autoconfigure-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter/2.3.0.RELEASE/spring-boot-starter-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-aop:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-aop/2.3.0.RELEASE/spring-boot-starter-aop-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-data-redis:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-data-redis/2.3.0.RELEASE/spring-boot-starter-data-redis-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-jdbc/2.3.0.RELEASE/spring-boot-starter-jdbc-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-json:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-json/2.3.0.RELEASE/spring-boot-starter-json-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-logging:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-logging/2.3.0.RELEASE/spring-boot-starter-logging-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-test:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-test/2.3.0.RELEASE/spring-boot-starter-test-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-thymeleaf/2.3.0.RELEASE/spring-boot-starter-thymeleaf-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-tomcat/2.3.0.RELEASE/spring-boot-starter-tomcat-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-web:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-starter-web/2.3.0.RELEASE/spring-boot-starter-web-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-test:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-test/2.3.0.RELEASE/spring-boot-test-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/boot/spring-boot-test-autoconfigure/2.3.0.RELEASE/spring-boot-test-autoconfigure-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.data:spring-data-commons:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/data/spring-data-commons/2.3.0.RELEASE/spring-data-commons-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.data:spring-data-keyvalue:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/data/spring-data-keyvalue/2.3.0.RELEASE/spring-data-keyvalue-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework.data:spring-data-redis:2.3.0.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/data/spring-data-redis/2.3.0.RELEASE/spring-data-redis-2.3.0.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-aop:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-aop/5.2.6.RELEASE/spring-aop-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-beans:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-beans/5.2.6.RELEASE/spring-beans-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-context:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-context/5.2.6.RELEASE/spring-context-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-context-support:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-context-support/5.2.6.RELEASE/spring-context-support-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-core:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-core/5.2.6.RELEASE/spring-core-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-expression:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-expression/5.2.6.RELEASE/spring-expression-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-jcl:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-jcl/5.2.6.RELEASE/spring-jcl-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-jdbc:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-jdbc/5.2.6.RELEASE/spring-jdbc-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-oxm:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-oxm/5.2.6.RELEASE/spring-oxm-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-test:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-test/5.2.6.RELEASE/spring-test-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-tx:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-tx/5.2.6.RELEASE/spring-tx-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-web:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-webmvc:5.2.6.RELEASE">
+    <archive path="D:/maven_storage/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE">
+    <archive path="D:/maven_storage/org/thymeleaf/extras/thymeleaf-extras-java8time/3.0.4.RELEASE/thymeleaf-extras-java8time-3.0.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.thymeleaf:thymeleaf:3.0.11.RELEASE">
+    <archive path="D:/maven_storage/org/thymeleaf/thymeleaf/3.0.11.RELEASE/thymeleaf-3.0.11.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.thymeleaf:thymeleaf-spring5:3.0.11.RELEASE">
+    <archive path="D:/maven_storage/org/thymeleaf/thymeleaf-spring5/3.0.11.RELEASE/thymeleaf-spring5-3.0.11.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.unbescape:unbescape:1.1.6.RELEASE">
+    <archive path="D:/maven_storage/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.xmlunit:xmlunit-core:2.7.0">
+    <archive path="D:/maven_storage/org/xmlunit/xmlunit-core/2.7.0/xmlunit-core-2.7.0.jar" />
+  </library>
+  <library name="Maven: org.yaml:snakeyaml:1.26">
+    <archive path="D:/maven_storage/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar" />
+  </library>
+</eclipse-userlibraries>
+

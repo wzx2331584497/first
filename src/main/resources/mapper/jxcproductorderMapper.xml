@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--     和抽象接口类一对一 namespace 必填将xml文件和userInterface(抽象文件(接口）)进行关联-->
+<mapper namespace="com.bypx.synthesis.dao.JxcproductorderInterface">
+    <!--queryall只会返回已经通过审核的数据 例如status=3-->
+    <select id="queryall" parameterType="String" resultMap="jxcproductorder">
+        SELECT typeid
+        ,SUM(number) AS number
+        FROM jxcproductorder  WHERE status=3  GROUP BY typeid
+    </select>
+    <insert id="add_reduce" parameterType="jxcproductorder" >
+    insert into jxcproductorder(id,typeid,number,price,status,ordertype,createdate,creater,createrid) values(#{id},#{typeid},#{number},#{price},#{status},#{ordertype},#{createdate},#{creater},#{createrid})
+</insert>
+    <select id="queryStoreout" parameterType="jxcproductorder" resultMap="jxcproductorder">
+     select * from jxcproductorder
+        <where>
+            <if test="creater==null  ">
+               and ordertype=2
+            </if>
+         <if test="creater!=null and creater!='' ">
+            and  creater=#{creater} and ordertype=2
+        </if>
+            <if test="typeid!=null and typeid!='' ">
+                and typeid like '%${typeid}%'
+            </if>
+        </where>
+    </select>
+    <select id="queryStorein" parameterType="jxcproductorder" resultMap="jxcproductorder">
+     select * from jxcproductorder
+        <where>
+            <if test="creater==null ">
+                and ordertype=1
+            </if>
+            <if test="creater!=null and creater!='' ">
+                and  creater=#{creater} and ordertype=1
+            </if>
+
+            <if test="typeid!=null and typeid!='' ">
+                and typeid like '%${typeid}%'
+            </if>
+        </where>
+    </select>
+    <select id="queryDocumentaudit" parameterType="jxcproductorder" resultMap="jxcproductorder">
+     select * from jxcproductorder
+        <where>
+         <if test="ordertype!=null and ordertype!='' ">
+            and  ordertype=#{ordertype}
+        </if>
+            <if test="creater!=null and creater!='' ">
+                and  creater=#{creater}
+            </if>
+            <if test="typeid!=null and typeid!='' ">
+                and typeid like '%${typeid}%'
+            </if>
+
+            <if test="status!=null and status!='' ">
+                and  status=#{status}
+            </if>
+        </where>
+    </select>
+<delete id="dele" parameterType="String">
+    delete from jxcproductorder where id=#{id}
+</delete>
+    <update id="upload" parameterType="jxcproductorder">
+        update jxcproductorder set price=#{price},number=#{number},status=1 where id=#{id}
+    </update>
+    <update id="pass" parameterType="jxcproductorder">
+        update jxcproductorder set status=3 where id=#{id}
+    </update>
+    <update id="reject"  parameterType="jxcproductorder">
+           update jxcproductorder set status=2,cause=#{cause}   where id=#{id}
+
+
+
+
+
+    </update>
+
+    <resultMap id="jxcproductorder" type="jxcproductorder">
+        <result property="id" column="id"></result>
+        <result property="typeid" column="typeid"></result>
+        <result property="number" column="number"></result>
+        <result property="price" column="price"></result>
+        <result property="creater" column="creater"></result>
+        <result property="createrid" column="createrid"></result>
+        <result property="ordertype" column="ordertype"></result>
+        <result property="createdate" column="createdata"></result>
+        <result property="status" column="status"></result>
+        <result property="cause" column="cause"></result>
+    </resultMap>
+</mapper>

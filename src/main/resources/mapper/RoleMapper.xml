@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--     和抽象接口类一对一 namespace 必填将xml文件和userInterface(抽象文件(接口）)进行关联-->
+<mapper namespace="com.bypx.synthesis.dao.RoleInterface">
+    <insert id="add" parameterType="Role">
+   insert  into role(id,name,flag) values(#{id},#{name},#{flag})
+    </insert>
+    <delete id="dele" parameterType="String">
+delete  from role where name=#{name}
+    </delete>
+    <select id="query" parameterType="Role" resultMap="query">
+select  * from role where name=#{name}
+    </select>
+    <update id="set" parameterType="Role">
+update role set flag=#{flag},name=#{name} where id=#{id}
+    </update>
+    <select id="rolequery" parameterType="role" resultMap="query">
+    select * from role
+    <where>
+        <if test="name!=null and name!='' ">
+            and name like '%${name}%'
+        </if>
+        <if test="flag!=null and flag!='' ">
+            and flag like '%${flag}%'
+        </if>
+    </where>
+    </select>
+    <resultMap id="query" type="Role">
+        <result property="id" column="id"></result>
+        <result property="name" column="name"></result>
+        <result property="flag" column="flag"></result>
+    </resultMap>
+</mapper>

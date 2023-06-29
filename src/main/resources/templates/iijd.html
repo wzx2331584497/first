@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+<style>
+    #time{
+        color: red;
+    }
+
+
+
+</style>
+</head>
+<body>
+<button id="button2">后退</button>
+<p>
+    <span id="time">5</span>倒计时结束
+
+</p>
+<input type="radio" name="sex" value="男">男<br/>
+<input type="radio" name="sex" value="女">女
+<form action="#" method="get">
+
+    账户:<input  type="text" id="account" name="username">
+    密码:<input   type="text" id="password"  value="问答问答" name="password">
+    <input type="submit" value="登录">
+    <input type="image" src="text2.html">
+<img id="photo" src="https://img01.sogoucdn.com/v2/thumb/retype_exclude_gif/ext/auto/q/80/crop/xy/ai/t/0/w/562/h/752?appid=122&url=https://img03.sogoucdn.com/app/a/100520020/f2ee1aca74c98ea933e96b70185a9845">
+</form>
+<button onclick="imgp()"> 点击我换图片</button>
+<button id="button">点我刷新当前页面</button>
+<script>
+
+    var bu2=document.getElementById("button2")
+    bu2.onclick=function () {
+        var a=5;
+        history.back()
+    }
+
+
+
+
+    //     alert("2323232")
+    //     var number=13213123123;
+    // document.write(number+typeof(number)+"<br>")
+    //     var string="wdawdaw";
+    //     document.write(string  + typeof(string)+"<br>")
+    //     document.write(number+"<br>")
+    //
+    //
+    //  var a= /\W2/
+    // var c="bcaD2"
+    //  var b =  a.test(c)
+    //     alert(b)
+
+
+    //        var bu=document.getElementById("button")
+    // bu.onclick=function () {
+    //
+    //     location.href="https://www.w3school.com.cn/jquery/jquery_ref_selectors.asp";
+    // }
+
+
+
+     // function imgp() {
+     //     alert("我要换图片了")
+     //     var  img=document.getElementById("photo");
+     //     img.src="https://scpic.chinaz.net/files/default/imgs/2022-07-30/7e2d474c284a5a8c_s.jpg";
+     //
+     // }
+     // function aaa(){
+     //     alert("你完蛋了")
+     // }
+     //
+     //
+
+
+  // var aaaa=  setInterval(aaa,2000)
+  //   clearInterval(aaaa)
+  //   var a=location;
+  //    console.log(a)
+    setInterval(f,1000)
+
+    var a=5;
+function f() {
+
+    --a;
+    if (a<0){
+        a=5
+    }
+    var time=document.getElementById("time")
+    time.style.color="red"
+    time.innerHTML=a
+
+if (a==0){
+
+    location.href="https://www.bilibili.com/video/BV1qv4y1o79t?p=180&vd_source=4053294825317481f253258694c391cb"
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

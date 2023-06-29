@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--     和抽象接口类一对一 namespace 必填将xml文件和userInterface(抽象文件(接口）)进行关联-->
+<mapper namespace="com.bypx.synthesis.dao.UserInterface">
+    <!--   id是interface中抽象方法的方法名 parameterType输入参数的数据类型-->
+    <insert id="add" parameterType="User">
+        <!--        直接写sql语句  下面写的是括号中间的是该类型数据的属性名
+        这里是User的属性名和user2(id,name,account,password)中的相对应赋值而不是通过方法取值-->
+        insert into user2(id,name,account,password) values(#{id},#{name},#{account},#{password});
+    </insert>
+    <delete id="dele" parameterType="User">
+        <!--        直接写sql语句  下面写的是括号中间的是该类型数据的属性名
+        这里是User的属性名和user2(id,name,account,password)中的相对应赋值而不是通过方法取值-->
+        delete from user2 where id=#{id}
+    </delete>
+    <update id="edit" parameterType="User">
+UPDATE user2 SET account=#{account},NAME=#{name} WHERE id=#{id};
+    </update>
+    <select id="query" parameterType="user" resultMap="comcom">
+        select * from user2
+        <where>
+            <if test="account!=null and account!='' ">
+                and account like '%${account}%'
+            </if>
+            <if test="name!=null and name!='' ">
+                and name like '%${name}%'
+            </if>
+        </where>
+    </select>
+   <select id="login" parameterType="User" resultMap="comcom">
+     SELECT  * FROM user2 WHERE account=#{account}
+   </select>
+    <insert id="register" parameterType="User">
+    insert into user2(id,account,password) values(#{id},#{account},#{password});
+   </insert>
+    <select id="query2" parameterType="User" resultMap="query2">
+    select * from user2
+        <where>
+            <if test="account!=null and account!='' ">
+                and account like '%${account}%'
+            </if>
+            <if test="name!=null and name!='' ">
+                and name like '%${name}%'
+            </if>
+        </where>
+    </select>
+<!--父菜单数据-->
+    <select id="menu" parameterType="String"  resultMap="menu">
+      SELECT text.*FROM user2,role,menurole,TEXT WHERE user2.`account`=#{account} AND user2.`role`=role.`name`AND role.`name`=menurole.`role` AND menurole.`menu`=text.`label`
+    </select>
+    <select id="menuall" parameterType="String"  resultMap="menu">
+  select * from text;
+    </select>
+    <resultMap id="menu" type="menu">
+        <!--父类菜单数据映射-->
+        <result property="id" column="id"></result>
+        <result property="label" column="label"></result>
+        <result property="icon" column="icon"></result>
+        <result property="url" column="url"></result>
+        <result property="pid" column="pid"></result>
+        <result property="order1" column="order1"></result>
+    </resultMap>
+    <select id="menu1" parameterType="menu"  resultMap="menu">
+        select * from text where pid=#{id}
+    </select>
+    <resultMap id="menu1" type="menu">
+        <!--父类菜单数据映射-->
+        <result property="id" column="id"></result>
+        <result property="label" column="label"></result>
+        <result property="icon" column="icon"></result>
+        <result property="url" column="url"></result>
+        <result property="pid" column="pid"></result>
+        <result property="order1" column="order1"></result>
+    </resultMap>
+<resultMap id="query2" type="User">
+    <result property="account" column="account"></result>
+    <result property="name" column="name"></result>
+</resultMap>
+    <!-- column数据库中字段名  property javabean中数据类型的属性名
+    resultMap将查询到的值映射到对象的属性中  propert 映射的对象 column被映射的对象-->
+    <!--设置映射id该映射唯一表示 type 映射的数据类型-->
+    <!--多表查询-->
+    <!--   resultmap是要传递回前端的数据-->
+    <resultMap id="login" type="User">
+        <result property="password" column="password_"></result>
+        <result property="account" column="account"></result>
+    </resultMap>
+    <resultMap id="comcom" type="User">
+
+        <id property="id" column="id"></id>
+        <result property="account" column="account"></result>
+        <result property="password" column="password_"></result>
+        <result property="password" column="password"></result>
+        <result property="name" column="name"></result>
+        <!--中第一个user_cls是user中的属性  第二个是他的数据类型-->
+        <association property="user_cls" javaType="user_cls">
+            <result property="userid" column="userid"></result>
+        </association>
+
+
+
+
+    </resultMap>
+    <!--增加动态菜单-->
+    <insert id="addmenu" parameterType="menu">
+
+        insert into text(id,label,icon,url,pid,order1) values(#{id},#{label},#{icon},#{url},#{pid},#{order1});
+    </insert>
+
+    <insert id="addmenu2" parameterType="menu">
+        insert into text(id,label,icon,url) values(#{id},#{label},#{icon},#{url});
+    </insert>
+
+    <update id="setMenu" parameterType="menu">
+UPDATE text SET label=#{label},icon=#{icon},url=#{url}
+ ,order1=#{order1} WHERE id=#{id};
+    </update>
+
+    <delete id="delemenu" parameterType="menu">
+        delete from text where id=#{id}
+    </delete>
+<!--角色管理数据查询-->
+    <select id="rolequery" parameterType="role" resultMap="rolequery">
+        select * from role
+        <where>
+            <if test="name!=null and name!='' ">
+                and name like '%${name}%'
+            </if>
+            <if test="flag!=null and flag!='' ">
+                and flag like '%${flag}%'
+            </if>
+        </where>
+    </select>
+    <!--角色管理数据返回映射-->
+    <resultMap id="rolequery" type="role">
+
+        <result property="name" column="name"></result>
+        <result property="flag" column="flag"></result>
+    </resultMap>
+    <!--角色关联数据-->
+    <select id="rolecorrelation" parameterType="role1" resultMap="rolecorrelation1">
+        select name  from role
+    </select>
+    <!--角色管理数据返回映射-->
+    <resultMap id="rolecorrelation1" type="role1">
+        <result property="value" column="name"></result>
+    </resultMap>
+    <!--材料管理材料数据-->
+    <select id="MaterialManagement" parameterType="Material"  resultMap="MaterialManagement">
+        select * from material
+    </select>
+    <resultMap id="MaterialManagement" type="Material">
+        <!--菜单数据映射-->
+        <result property="id" column="id"></result>
+        <result property="label" column="label"></result>
+        <result property="p_id" column="p_id"></result>
+        <result property="creat_time" column="creat_time"></result>
+        <result property="order" column="order"></result>
+    </resultMap>
+<!--材料增加-->
+    <insert id="materialsadd" parameterType="Material">
+        insert into material(id,label,p_id,creat_time) values(#{id},#{label},#{p_id},#{creat_time});
+    </insert>
+<!--材料删除-->
+    <delete id="materialsdele" parameterType="Material">
+        delete from material where id=#{id}
+    </delete>
+    <select id="Material" parameterType="Material"  resultMap="Material">
+        select * from material where p_id=#{id}
+    </select>
+    <resultMap id="Material" type="Material">
+        <!--父类材料数据映射-->
+        <result property="id" column="id"></result>
+        <result property="label" column="name"></result>
+        <result property="creat_time" column="creat_time"></result>
+    </resultMap>
+    <!--材料修改-->
+    <update id="MaterialsetMenu" parameterType="Material">
+UPDATE material SET label=#{label} WHERE id=#{id}
+    </update>
+    <!--材料一级菜单添加-->
+    <insert id="Materialaddmenu2" parameterType="Material">
+        insert into material(id,label,creat_time) values(#{id},#{label},#{creat_time});
+    </insert>
+    <!--角色新增-->
+    <insert id="roleadd" parameterType="role">
+        <!--        直接写sql语句  下面写的是括号中间的是该类型数据的属性名
+        这里是User的属性名和user2(id,name,account,password)中的相对应赋值而不是通过方法取值-->
+        insert into role(name,flag) values(#{name},#{flag});
+    </insert>
+    <!--角色编辑-->
+    <update id="roleedit" parameterType="role">
+UPDATE role SET name=#{name},flag=#{flag} WHERE id=#{id};
+    </update>
+    <!--角色删除-->
+    <delete id="roledele" parameterType="role">
+        delete from role where id=#{id}
+    </delete>
+    <!--角色管理-用户关联表写入-->
+    <insert id="RoleMenuAssociation" parameterType="RoleMenuAssociation">
+        insert into RoleMenuAssociation(role,checkmenu) values(#{role},#{checkmenu});
+    </insert>
+    <!--查询角色关联表  关联信息写入-->
+    <select id="queryRoleMenuAssociation" parameterType="RoleMenuAssociation" resultMap="RoleMenuAssociation">
+        select  checkmenu from rolemenuassociation where role=#{role}
+    </select>
+    <resultMap id="RoleMenuAssociation" type="RoleMenuAssociation">
+        <!--父类材料数据映射-->
+        <result property="checkmenu" column="checkmenu"></result>
+
+    </resultMap>
+
+<!--查询角色关联表 -->
+    <select id="queryRole" parameterType="accountrole" resultMap="queryaccountrole">
+        select role  from accountrole where  account=#{account}
+    </select>
+    <resultMap id="queryaccountrole" type="accountrole">
+        <result property="rolename" column="rolename"></result>
+    </resultMap>
+<!--为空的账户关联角色插入信息-->
+    <insert id="insertaccountrole" parameterType="accountrole">
+        insert into accountrole(account,rolename) values(#{account},#{rolename});
+    </insert>
+<!--为角色关联更新已有的关联角色的账户-->
+    <update id="uploadaccountrole" parameterType="accountrole">
+UPDATE accountrole SET rolename=#{rolename} WHERE account=#{account};
+    </update>
+    <!--删除关角色账户联表信息-->
+    <delete id="deleaccountrole" parameterType="accountrole">
+        delete from accountrole where account=#{account}
+    </delete>
+    <!--删除角色菜单关联表信息-->
+    <delete id="delerolemenu" parameterType="RoleMenuAssociation">
+        delete from rolemenuassociation where role=#{role}
+    </delete>
+    <update id="uploaduserrole" parameterType="User">
+UPDATE user2 SET role=#{role} WHERE account=#{account};
+    </update>
+
+    <select id="chaxunmenu" parameterType="menu"  resultMap="chaxunmenu">
+       SELECT text.* FROM labellabel,user2,TEXT WHERE  user2.`role`=labellabel.`name` AND labellabel.`label`=text.`label`
+    </select>
+
+    <resultMap id="chaxunmenu" type="menu">
+        <!--父类菜单数据映射-->
+        <result property="id" column="id"></result>
+        <result property="label" column="label"></result>
+        <result property="icon" column="icon"></result>
+        <result property="url" column="url"></result>
+        <result property="pid" column="pid"></result>
+        <result property="order1" column="order1"></result>
+    </resultMap>
+    <!--建立关联表-->
+    <insert id="insertlabellabel" parameterType="labellabel">
+        insert into labellabel(id,name,flag,label) values(#{id},#{name},#{flag},#{label});
+    </insert>
+    <!--查询账户对应menu-->
+    <select id="queryrolemenu" parameterType="role"  resultMap="queryrolemenu">
+   SELECT * FROM user2 ,role WHERE account=#{account} AND  user2.`role`=role.`name`
+    </select>
+    <resultMap id="queryrolemenu" type="role">
+        <!---->
+        <result property="menu" column="menu"></result>
+    </resultMap>
+    <!--删除labellabel-->
+    <delete id="delelabellabel" parameterType="menu">
+        delete from labellabel
+    </delete>
+
+
+    <!--查询菜单关联表  关联信息更新 (重新覆盖关联)-->
+    <update id="uploadRoleMenuAssociation" parameterType="role">
+
+
+
+
+    </update>
+
+
+</mapper>

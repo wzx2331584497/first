@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--     和抽象接口类一对一 namespace 必填将xml文件和userInterface(抽象文件(接口）)进行关联-->
+<mapper namespace="com.bypx.synthesis.dao.JxcproductInterface">
+    <select id="queryall" parameterType="jxcproduct" resultMap="jxcproduct">
+       select  *from jxcproduct
+        <where>
+            <if test="typeid!=null and typeid!='' ">
+                and typeid like '%${typeid}%'
+            </if>
+
+        </where>
+    </select>
+
+    <update id="upload" parameterType="jxcproduct">
+              update  jxcproduct set total=#{total} where typeid=#{typeid}
+    </update>
+
+
+    <select id="query" parameterType="jxcproduct" resultMap="jxcproduct">
+      select  * from jxcproduct where typeid=#{typeid}
+    </select>
+    <insert id="add" parameterType="jxcproduct">
+        insert into jxcproduct(id,typeid,total) values(#{id},#{typeid},#{total})
+    </insert>
+<select id="judge" parameterType="String" resultMap="jxcproduct">
+    SELECT total FROM jxcproduct WHERE typeid=#{typeid}
+</select>
+    <delete id="dele" parameterType="jxcproduct">
+        delete  from jxcproduct where typeid=#{typeid}
+    </delete>
+    <select id="queryone" parameterType="jxcproduct" resultMap="jxcproduct">
+        select  *from jxcproduct  where typeid=#{typeid}
+    </select>
+
+
+    <resultMap id="jxcproduct" type="jxcproduct">
+        <result property="id" column="id"></result>
+        <result property="typeid" column="typeid"></result>
+        <result property="total" column="total"></result>
+    </resultMap>
+
+</mapper>

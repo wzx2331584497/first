@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7/css/bootstrap-table.min.css">
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../static/bootstrap-3.3.7/js/bootstrap-table.min.js"></script>
+    <script src="../static/bootstrap-3.3.7/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../static/js/user.js"></script>
+
+
+</head>
+<body>
+<!--里面内容根据网页大小自动缩放-&#45;&#45;自适应大小-->
+
+
+<div class="container">
+
+    <!--    //查询框-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">查询条件</h3>
+        </div>
+        <div class="panel-body">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="ImputName">姓名:</label>
+                    <input type="text" class="form-control" id="ImputName">
+                </div>
+                <div class="form-group">
+                    <label for="ImputAccount">账号</label>
+                    <input type="text" class="form-control" id="ImputAccount">
+                </div>
+                <button type="button" class="btn btn-default" onclick="tableQuery()"> 查询</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="toolbar">
+        <button type="button" class="btn btn-default btn-lg" onclick="openDialog()">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 新增
+        </button>
+    </div>
+
+
+    <table id="table"></table>
+
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">用户注册</h4>
+                </div>
+                <div class="modal-body">
+
+                    姓名 <input type="text" id="formName">
+                    账户 <input type="text" id="formAccount">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="close()">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="formSub()">提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+</div>
+</body>
+</html>

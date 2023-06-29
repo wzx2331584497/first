@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--     和抽象接口类一对一 namespace 必填将xml文件和userInterface(抽象文件(接口）)进行关联-->
+<mapper namespace="com.bypx.synthesis.dao.textInterface">
+    <insert id="add" parameterType="menu">
+   insert  into text(id,label,icon,url,pid,order1) values(#{id},#{label},#{icon},#{url},#{pid},#{order1},)
+    </insert>
+    <delete id="dele" parameterType="String">
+delete  from text where name=#{id}
+    </delete>
+    <select id="queryall" parameterType="menu" resultMap="queryall">
+select  * from text
+    </select>
+    <select id="query_id" parameterType="menu" resultMap="queryall">
+select  * from text where id=#{id}
+    </select>
+    <update id="set" parameterType="menu">
+update text set flag=#{flag},menu=#{menu} where id=#{id}
+    </update>
+
+    <select id="queryid" parameterType="String"  resultMap="queryall">
+     SELECT TEXT.`id` FROM menurole,TEXT WHERE menurole.`role`=#{role} AND menurole.`menu`=text.`label`
+    </select>
+<!-- ..........................ResultMap......................-->
+    <resultMap id="queryall" type="menu">
+        <result property="id" column="id"></result>
+        <result property="label" column="label"></result>
+        <result property="icon" column="icon"></result>
+        <result property="url" column="url"></result>
+        <result property="pid" column="pid"></result>
+        <result property="order1" column="order1"></result>
+    </resultMap>
+
+</mapper>

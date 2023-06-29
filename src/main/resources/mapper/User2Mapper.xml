@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--     和抽象接口类一对一 namespace 必填将xml文件和userInterface(抽象文件(接口）)进行关联-->
+<mapper namespace="com.bypx.synthesis.dao.User2Interface">
+    <select id="queryaccountid" parameterType="String" resultMap="user2">
+select  id from user2 where account=#{account}
+    </select>
+    <select id="query" parameterType="String" resultMap="user2">
+select * from user2 where account=#{account}
+    </select>
+    <resultMap id="user2" type="User" >
+        <result property="id" column="id"></result>
+        <result property="password" column="password"></result>
+        <result property="name" column="name"></result>
+    </resultMap>
+</mapper>
